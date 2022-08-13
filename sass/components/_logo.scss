@@ -1,0 +1,22 @@
+.logo {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+            color: $color-accent;
+        }
+}
+
+.header__logo {
+    margin-right: 93px;
+    color: $color-black;
+}
+
+.web {
+    color: $color-accent;
+}

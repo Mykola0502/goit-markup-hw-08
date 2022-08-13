@@ -1,0 +1,37 @@
+.works {
+    padding-top: 0;
+}
+
+.works__list {
+    display: flex;
+    gap: $indent;
+}
+
+.section__title {
+    margin-bottom: 50px;
+    color: $color-text-title;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+.works__thumb {
+    position: relative;
+}
+
+.works__subtitle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $background-works;
+}

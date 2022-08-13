@@ -1,0 +1,49 @@
+// колір основного тексту #212121
+// колір додаткового тексту #757575
+// колір логотипа #000000
+// білий колір  #FFFFFF
+// колір акцент #2196F3
+// колір hover головної кнопки #188CE8
+// колір фону героя і футера #2F303A
+// додатковий колір фону #F5F4FA
+// колір контактів футера rgba(255, 255, 255, 0.6)
+
+/* fonts */
+$font-main: 'Roboto', sans-serif;
+$font-secondary: 'Raleway', sans-serif;
+
+/* text-colors */
+$color-text-primary: #757575;
+$color-text-title: #212121;
+$color-footer-contacts: rgba(255, 255, 255, 0.6);
+
+/* bg colors */
+$background-footer-hero-color: #2f303a;
+$background-secondary-color: #f5f4fa;
+$background-works: rgba(47, 48, 58, 0.8);
+$background-social-link: rgba(255, 255, 255, 0.1);
+$background-backdrop: rgba(0, 0, 0, 0.2);
+$background-gallery-overlay: rgba(33, 150, 243, 0.9);
+
+//   border color
+$color-border-header: #ececec;
+$color-border-footer-form: rgba(255, 255, 255, 0.3);
+$color-border-modal-btn-close: rgba(0, 0, 0, 0.1);
+$color-border-modal-form-input: rgba(33, 33, 33, 0.2);
+
+/* other colors */
+$color-black: #000000;
+$color-white: #ffffff;
+$color-accent: #2196f3;
+$color-btn-hover: #188ce8;
+$color-border: #eeeeee;
+$color-link-icon: #afb1b8;
+$color-transparent: transparent;
+$color-modal-form-input: rgba(117, 117, 117, 0.9);
+$color-modal-form-comment: rgba(117, 117, 117, 0.5);
+
+/* others */
+$indent: 30px;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$linear-gradient-hero: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+$box-shadow-main: 0px 4px 4px rgba(0, 0, 0, 0.15);

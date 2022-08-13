@@ -1,0 +1,12 @@
+@mixin bordered($color) {
+  border: 1px solid $color;
+}
+
+@mixin centeredFlex($type: flex) {
+  display: $type;
+  align-items: center;
+}
+
+@mixin flex-basis($item, $indent: 30px) {
+  flex-basis: calc((100% - $indent * ($item - 1)) / $item);
+}

@@ -1,0 +1,86 @@
+.header {
+    border-bottom: 1px solid $color-border-header;
+}
+
+.header__container {
+    @include centeredFlex ();
+}
+
+.nav__list {
+    display: flex;
+    gap: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.nav__link {
+    display: block;
+    color: $color-text-title;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms $timing-function;
+
+    &:hover {
+            color: $color-accent;
+        }
+
+    &:focus {
+            color: $color-accent;
+        }
+}
+
+.nav__link--current {
+    position: relative;
+    color: $color-accent;
+
+    &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $color-accent;
+        }
+}
+
+.header__nav {
+    margin-right: auto;
+}
+
+.header-contacts {
+    @include centeredFlex ();
+    gap: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.icon-letter {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.icon-phone {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.header-contacts__link {
+    @include centeredFlex (inline-flex);
+    color: $color-text-primary;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+            color: $color-accent;
+        }
+}
+
