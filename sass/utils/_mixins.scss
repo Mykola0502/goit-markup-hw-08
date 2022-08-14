@@ -1,12 +1,22 @@
-@mixin bordered($color) {
-  border: 1px solid $color;
-}
+@import './decimals';
 
-@mixin centeredFlex($type: flex) {
+// @mixin bordered($color) {
+//   border: 1px solid $color;
+// }
+
+@mixin centeredFlex($type: flex, $ai: center, $jc: center) {
   display: $type;
-  align-items: center;
+  align-items: $ai;
+  justify-content: $jc;
 }
 
-@mixin flex-basis($item, $indent: 30px) {
-  flex-basis: calc((100% - $indent * ($item - 1)) / $item);
+@mixin flex-basis($items, $indent: 30px) {
+  flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+}
+
+@mixin fonts($fs, $lh, $ls: 0.03em, $fw: 700) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: decimal-round($lh/$fs);
+  letter-spacing: $ls;
 }

@@ -1,26 +1,26 @@
-.clients__list {
-    @include centeredFlex ();
-    gap: $indent;
-    justify-content: center;
-}
+// .clients__list {
+//     @include centeredFlex ();
+//     gap: $indent;
+//     justify-content: center;
+// }
 
-.clients__link {
-    @include centeredFlex (inline-flex);
-    width: 170px;
-    height: 92px;
-    justify-content: center;
-    color: $color-link-icon;
-    @include bordered ($color-link-icon);
-    border-radius: 4px;
-    transition: color 250ms $timing-function, border 250ms $timing-function;
+// .clients__link {
+//     @include centeredFlex (inline-flex);
+//     width: 170px;
+//     height: 92px;
+//     justify-content: center;
+//     color: $color-link-icon;
+//     @include bordered ($color-link-icon);
+//     border-radius: 4px;
+//     transition: color 250ms $timing-function, border 250ms $timing-function;
 
-    &:hover,
-    &:focus {
-            color: $color-accent;
-            @include bordered ($color-accent);
-        }
-}
+//     &:hover,
+//     &:focus {
+//             color: $color-accent;
+//             @include bordered ($color-accent);
+//         }
+// }
 
-.clients__icon {
-    fill: currentColor;
-}
+// .clients__icon {
+//     fill: currentColor;
+// }

@@ -1,22 +1,35 @@
 .logo {
-    font-family: $font-secondary;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    transition: color 250ms $timing-function;
+  font-family: $font-secondary;
+  @include fonts(24px, 28px);
+  transition: color 250ms $timing-function;
 
-    &:hover,
-    &:focus {
-            color: $color-accent;
-        }
+  @media screen and (min-width: 1200px) {
+    @include fonts(26px, 31px);
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
 }
 
 .header__logo {
+  color: $color-black;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: 1200px) {
     margin-right: 93px;
-    color: $color-black;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .web {
-    color: $color-accent;
+  color: $color-accent;
 }

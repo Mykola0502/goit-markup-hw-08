@@ -1,24 +1,29 @@
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .features-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $indent;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: $indent;
+    row-gap: 57px;
+  }
 }
 
 .features-list__item {
-  @include flex-basis(4);
+  @include flex-basis(1);
+
+  @media screen and (min-width: 768px) {
+    @include flex-basis(2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex-basis(4);
+  }
 }
 
 .features__thumb {
   @include centeredFlex();
-  width: 270px;
+  min-width: 270px;
   height: 120px;
   margin-bottom: 30px;
-  justify-content: center;
   background-color: $background-secondary-color;
   border-radius: 4px;
 }
@@ -26,9 +31,10 @@
 .features__subtitle {
   margin-bottom: 10px;
   color: $color-text-title;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include fonts(14px, 16px, null);
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
