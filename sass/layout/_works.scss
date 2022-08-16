@@ -11,12 +11,15 @@
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: $color-text-title;
-
-  @include fonts(36px, 42px);
-
   text-align: center;
+  @include fonts(28px, 33px);
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    @include fonts(36px, 42px);
+  }
 }
 
 .works__thumb {
