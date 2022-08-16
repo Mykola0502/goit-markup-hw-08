@@ -1,26 +1,50 @@
-// .clients__list {
-//     @include centeredFlex ();
-//     gap: $indent;
-//     justify-content: center;
-// }
+.clients__list {
+  @include centeredFlex();
+  flex-wrap: wrap;
+  gap: $indent;
+}
 
-// .clients__link {
-//     @include centeredFlex (inline-flex);
-//     width: 170px;
-//     height: 92px;
-//     justify-content: center;
-//     color: $color-link-icon;
-//     @include bordered ($color-link-icon);
-//     border-radius: 4px;
-//     transition: color 250ms $timing-function, border 250ms $timing-function;
+.clients__item {
+  @include flex-basis(2);
 
-//     &:hover,
-//     &:focus {
-//             color: $color-accent;
-//             @include bordered ($color-accent);
-//         }
-// }
+  @media screen and (min-width: 768px) {
+    @include flex-basis(3);
+  }
 
-// .clients__icon {
-//     fill: currentColor;
-// }
+  @media screen and (min-width: 1200px) {
+    @include flex-basis(6);
+  }
+}
+
+.clients__link {
+  @include centeredFlex(inline-flex);
+  height: 92px;
+  color: $color-link-icon;
+  outline: transparent;
+  @include bordered($color-link-icon);
+  border-radius: 4px;
+  transition: color 250ms $timing-function, border 250ms $timing-function;
+
+  @media screen and (max-width: 767.98px) {
+    width: 100%;
+    max-width: 210px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+    @include bordered($color-accent);
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}

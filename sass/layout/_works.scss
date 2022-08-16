@@ -10,18 +10,6 @@
   gap: $indent;
 }
 
-.section__title {
-  margin-bottom: 30px;
-  color: $color-text-title;
-  text-align: center;
-  @include fonts(28px, 33px);
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 50px;
-    @include fonts(36px, 42px);
-  }
-}
-
 .works__thumb {
   position: relative;
 }
