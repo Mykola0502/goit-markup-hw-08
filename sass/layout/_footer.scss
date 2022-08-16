@@ -115,21 +115,18 @@
 //         }
 // }
 
-// .form-btn {
-//     align-items: center;
-//     text-align: center;
-//     min-width: 200px;
-//     background-color: $color-accent;
-//     border-radius: 4px;
-//     font-family: inherit;
-//     font-weight: 700;
-//     font-size: 16px;
-//     line-height: 1.88;
-//     letter-spacing: 0.06em;
-//     border: none;
-//     color: $color-white;
-//     cursor: pointer;
-// }
+.form-btn {
+  align-items: center;
+  text-align: center;
+  min-width: 200px;
+  background-color: $color-accent;
+  border-radius: 4px;
+  font-family: inherit;
+  @include fonts(16px, 30px, 0.06em);
+  border: none;
+  color: $color-white;
+  cursor: pointer;
+}
 
 // .footer-form__form-btn {
 //     display: flex;

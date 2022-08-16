@@ -1,37 +1,38 @@
-// .works {
-//     padding-top: 0;
-// }
+.works {
+  @media screen and (max-width: 1199.98px) {
+    display: none;
+  }
+  padding-top: 0;
+}
 
-// .works__list {
-//     display: flex;
-//     gap: $indent;
-// }
+.works__list {
+  display: flex;
+  gap: $indent;
+}
 
-// .section__title {
-//     margin-bottom: 50px;
-//     color: $color-text-title;
-//     font-weight: 700;
-//     font-size: 36px;
-//     line-height: 1.17;
-//     text-align: center;
-// }
+.section__title {
+  margin-bottom: 50px;
+  color: $color-text-title;
 
-// .works__thumb {
-//     position: relative;
-// }
+  @include fonts(36px, 42px);
 
-// .works__subtitle {
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     width: 100%;
-//     padding-top: 27px;
-//     padding-bottom: 27px;
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     text-align: center;
-//     text-transform: uppercase;
-//     color: $color-white;
-//     background-color: $background-works;
-// }
+  text-align: center;
+}
+
+.works__thumb {
+  position: relative;
+}
+
+.works__subtitle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  @include fonts(14px, 16px);
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $background-works;
+}

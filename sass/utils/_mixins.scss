@@ -1,8 +1,8 @@
 @import './decimals';
 
-// @mixin bordered($color) {
-//   border: 1px solid $color;
-// }
+@mixin bordered($color) {
+  border: 1px solid $color;
+}
 
 @mixin centeredFlex($type: flex, $ai: center, $jc: center) {
   display: $type;
