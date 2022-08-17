@@ -1,119 +1,148 @@
-// .gallery__btn-list {
-//   @include centeredFlex();
-//   margin-bottom: 50px;
-//   gap: 8px;
-//   justify-content: center;
-// }
+.gallery__btn-list {
+  margin-bottom: 40px;
+  @include centeredFlex(flex, center, flex-start);
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 8px;
 
-// .gallery__btn {
-//   display: block;
-//   padding-top: 6px;
-//   padding-bottom: 6px;
-//   padding-left: 22px;
-//   padding-right: 22px;
-//   color: $color-text-title;
-//   background-color: $background-secondary-color;
-//   border-radius: 4px;
-//   font-family: inherit;
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 1.63;
-//   text-decoration: none;
-//   text-align: center;
-//   letter-spacing: 0.03em;
-//   border: none;
-//   cursor: pointer;
-//   transition: color 250ms $timing-function, background-color 250ms $timing-function,
-//     box-shadow 250ms $timing-function;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    @include centeredFlex();
+  }
 
-//   &:hover,
-//   &:focus {
-//     color: $color-white;
-//     background-color: $color-accent;
-//     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-//       0px 2px 2px rgba(0, 0, 0, 0.12);
-//   }
-// }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
 
-// .gallery__btn-current {
-//   color: $color-white;
-//   background-color: $color-accent;
-// }
+.gallery__btn {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  color: $color-text-title;
+  background-color: $background-secondary-color;
+  border-radius: 4px;
+  font-family: inherit;
+  @include fonts(16px, 26px, 0.03em, 500);
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+  transition: color 250ms $timing-function, background-color 250ms $timing-function,
+    box-shadow 250ms $timing-function;
 
-// .gallery__list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: $indent;
-// }
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-accent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
 
-// .gallery__item {
-//   @include flex-basis(3);
-// }
+.gallery__btn-current {
+  color: $color-white;
+  background-color: $color-accent;
+}
 
-// .gallery__link {
-//   display: block;
-//   transition: box-shadow 250ms $timing-function;
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $indent;
+}
 
-//   &:hover,
-//   &:focus {
-//     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-//       1px 4px 6px rgba(0, 0, 0, 0.16);
-//   }
-// }
+.gallery__item {
+  @include flex-basis(1);
 
-// .gallery__thumb {
-//   position: relative;
-//   overflow: hidden;
-// }
+  @media screen and (min-width: 768px) {
+    @include flex-basis(2);
+  }
 
-// .gallery__overlay {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateY(100%);
-//   width: 100%;
-//   height: 100%;
-//   padding-top: 63px;
-//   padding-bottom: 63px;
-//   padding-left: 24px;
-//   padding-right: 24px;
-//   background-color: $background-gallery-overlay;
-//   transition: transform 250ms $timing-function;
+  @media screen and (min-width: 1200px) {
+    @include flex-basis(3);
+  }
+}
 
-//   .gallery__link:hover &,
-//   .gallery__link:focus & {
-//     transform: translateY(0);
-//   }
-// }
+.gallery__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 250ms $timing-function;
 
-// .gallery__text {
-//   font-size: 18px;
-//   line-height: 1.56;
-//   color: $color-white;
-// }
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
 
-// .gallery__wrapper {
-//   padding-top: 20px;
-//   padding-bottom: 20px;
-//   padding-left: 24px;
-//   padding-right: 24px;
-//   @include bordered($color-border);
-//   border-top: none;
-// }
+.gallery__thumb {
+  position: relative;
+  overflow: hidden;
+}
 
-// .gallery__subtitle {
-//   margin-bottom: 4px;
+.gallery__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  width: 100%;
+  height: 100%;
+  padding-top: 77px;
+  padding-bottom: 77px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: $background-gallery-overlay;
+  transition: transform 250ms $timing-function;
 
-//   color: $color-text-title;
-//   font-weight: 700;
-//   font-size: 18px;
-//   line-height: 2;
-//   letter-spacing: 0.06em;
-// }
+  @media screen and (min-width: 768px) {
+    padding-top: 49px;
+    padding-bottom: 77px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 
-// .gallery__description {
-//   color: $color-text-primary;
+  @media screen and (min-width: 1200px) {
+    padding-top: 63px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 
-//   font-size: 16px;
-//   line-height: 1.88;
-// }
+  .gallery__link:hover &,
+  .gallery__link:focus & {
+    transform: translateY(0);
+  }
+}
+
+.gallery__text {
+  @include fonts(18px, 28px, 0.03em, null);
+  color: $color-white;
+}
+
+.gallery__wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  flex-grow: 1;
+  @include bordered($color-border);
+  border-top: none;
+}
+
+.gallery__subtitle {
+  margin-bottom: 4px;
+
+  color: $color-text-title;
+  @include fonts(18px, 36px, 0.06em);
+}
+
+.gallery__description {
+  color: $color-text-primary;
+
+  @include fonts(16px, 30px, 0.03em, null);
+}
