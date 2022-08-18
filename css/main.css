@@ -715,9 +715,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -760,14 +757,23 @@ img {
 }
 
 .modal-form__policy-text {
+  text-align: left;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 10px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 480px) {
+  .modal-form__policy-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-form__policy-text {

@@ -172,7 +172,9 @@
 }
 
 .modal-form__checkbox-field {
-  @include centeredFlex();
+  // @include centeredFlex();
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -207,8 +209,13 @@
 }
 
 .modal-form__policy-text {
+  text-align: left;
   user-select: none;
-  @include fonts(12px, 14px, 0.03em, 400);
+  @include fonts(10px, 12px, 0.03em, 400);
+
+  @media screen and (min-width: 480px) {
+    @include fonts(12px, 14px, 0.03em, 400);
+  }
 
   @media screen and (min-width: 1200px) {
     @include fonts(14px, 24px, 0.03em, 400);
