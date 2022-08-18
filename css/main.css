@@ -1306,6 +1306,12 @@ img {
   }
 }
 
+@media screen and (max-width: 767.98px) {
+  .features-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 .features__thumb {
   display: -webkit-box;
   display: -ms-flexbox;
