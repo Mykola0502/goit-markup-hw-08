@@ -92,8 +92,10 @@
   transform: translateY(100%);
   width: 100%;
   height: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  // padding-top: 30px;
+  // padding-bottom: 30px;
+  padding-top: 10vmin;
+  padding-bottom: 10vmin;
   padding-left: 24px;
   padding-right: 24px;
   background-color: $background-gallery-overlay;
@@ -127,7 +129,11 @@
 }
 
 .gallery__text {
-  @include fonts(14px, 22px, 0.03em, null);
+  font-size: calc(0.8rem + 0.5vmin);
+  line-height: calc(0.8rem + 2vmin);
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  // @include fonts(14px, 22px, 0.03em, null);
   color: $color-white;
 
   @media screen and (min-width: 480px) {
